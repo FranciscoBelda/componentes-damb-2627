@@ -26,4 +26,16 @@ export const routes: Routes = [
     path: 'action-sheet',
     loadComponent: () => import('./pages/action-sheet/action-sheet.page').then( m => m.ActionSheetPage)
   },
+  {
+    path: 'card',
+    loadComponent: () => import('./pages/card/card.page').then( m => m.CardPage)
+  },
+  {
+    path: 'fab',
+    loadComponent: () => import('./pages/fab/fab.page').then( m => m.FabPage)
+  },
+  {
+    path: 'slides',
+    loadComponent: () => import('./pages/slides/slides.page').then( m => m.SlidesPage)
+  },
 ];

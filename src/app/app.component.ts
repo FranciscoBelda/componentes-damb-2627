@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { IonApp, IonRouterOutlet } from '@ionic/angular';
-import {americanFootball, beaker, card, grid, logoAppleAppstore} from "ionicons/icons";
+import {albums, americanFootball, beaker, car, card, grid, logoAppleAppstore} from "ionicons/icons";
 import {addIcons} from "ionicons";
 import {MenuComponent} from "./components/menu/menu.component";
-
+import {register} from "swiper/element/bundle";
+register();
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
@@ -11,6 +12,7 @@ import {MenuComponent} from "./components/menu/menu.component";
 })
 export class AppComponent {
   constructor() {
-    addIcons({card, grid, americanFootball, logoAppleAppstore, beaker})
+    addIcons({card, grid, americanFootball, logoAppleAppstore, beaker, car
+    , albums})
   }
 }
