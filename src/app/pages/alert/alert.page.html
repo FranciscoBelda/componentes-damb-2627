@@ -1,10 +1,33 @@
-<app-header titulo="alert"/>
+<app-header titulo="alert de {{nombre() || 'Nadie'}}"/>
 
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">alert</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="ion-padding">
+
+  <h2>Alert</h2>
+  <ion-button id="abrir-alert" expand="block" color="secondary">Abrir Alert</ion-button>
+
+
+  <ion-alert trigger="abrir-alert" header="Título del Alert"
+             subHeader="Subtítulo del Alert" message="Mensaje del alert"
+             [buttons]="botonesAlert"></ion-alert>
+
+  <h2>Alert con Input</h2>
+  <ion-button id="abrir-alert-input" expand="block"
+              color="tertiary">Abrir Input</ion-button>
+
+
+  <ion-alert trigger="abrir-alert-input"
+             header="Escribe el nombre"
+             [inputs]="inputsAlert"
+             [buttons]="botonesInput"></ion-alert>
+
+  <h2>Alert con Radio</h2>
+  <ion-button id="abrir-alert-radio" expand="block"
+              [color]="color()">Abrir Radio</ion-button>
+
+
+  <ion-alert trigger="abrir-alert-radio"
+             header="Selecciona color"
+             [inputs]="inputsRadio"
+             [buttons]="botonesRadio"></ion-alert>
 </ion-content>
